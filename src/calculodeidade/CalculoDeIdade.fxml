@@ -6,28 +6,47 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculodeidade.CalculoDeIdadeController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="Action">
+          <Menu mnemonicParsing="false" text="Tela">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+                <MenuItem fx:id="menuItemLimpar" mnemonicParsing="false" onAction="#handleMenuAction" text="Limpar" />
+                <MenuItem fx:id="menuItemFechar" mnemonicParsing="false" onAction="#handleMenuAction" text="Fechar" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
    </top>
-   <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+   <bottom>
+      <Pane fx:id="tela" prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="20.0" layoutY="36.0" text="Label" />
-            <Label layoutX="20.0" layoutY="100.0" text="Label" />
-            <TextField layoutX="107.0" layoutY="32.0" />
-            <Button layoutX="308.0" layoutY="32.0" mnemonicParsing="false" text="Button" />
-            <Label layoutX="107.0" layoutY="100.0" text="Label" />
+            <Label fx:id="label2" layoutX="20.0" layoutY="154.0" text="Idade em anos:" />
+            <Button fx:id="b1" layoutX="387.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Calcular" />
+            <Label fx:id="label3" layoutX="144.0" layoutY="154.0" />
+            <Label fx:id="label1" layoutX="20.0" layoutY="36.0" text="Data de nascimento:" />
+            <DatePicker id="datePicker" fx:id="datePicker" layoutX="143.0" layoutY="32.0" />
+            <Label fx:id="label4" layoutX="20.0" layoutY="189.0" text="Idade em meses:" />
+            <Label fx:id="label5" layoutX="144.0" layoutY="190.0" />
+            <Label fx:id="label6" layoutX="20.0" layoutY="224.0" text="Idade em dias:" />
+            <Label fx:id="label7" layoutX="144.0" layoutY="226.0" />
+            <Label fx:id="label8" layoutX="20.0" layoutY="259.0" text="Idade em horas:" />
+            <Label fx:id="label9" layoutX="143.0" layoutY="259.0" />
+            <Label fx:id="label10" layoutX="20.0" layoutY="294.0" text="Idade em minutos:" />
+            <Label fx:id="label11" layoutX="143.0" layoutY="294.0" />
+            <Label fx:id="label12" layoutX="20.0" layoutY="329.0" text="Idade em segundos:" />
+            <Label fx:id="label13" layoutX="143.0" layoutY="330.0" />
+            <Label fx:id="label14" layoutX="20.0" layoutY="98.0" text="Idade:" />
+            <Label fx:id="label15" layoutX="58.0" layoutY="98.0" />
+            <Label fx:id="label16" layoutX="80.0" layoutY="98.0" text="anos, " />
+            <Label fx:id="label17" layoutX="114.0" layoutY="98.0" />
+            <Label fx:id="label18" layoutX="136.0" layoutY="98.0" text="meses, " />
+            <Label fx:id="label19" layoutX="177.0" layoutY="98.0" />
+            <Label fx:id="label20" layoutX="199.0" layoutY="98.0" text="dias." />
+            <Label fx:id="label21" layoutX="303.0" layoutY="98.0" text="Dia da semana:" />
+            <Label fx:id="label22" layoutX="386.0" layoutY="99.0" />
          </children>
       </Pane>
-   </center>
+   </bottom>
 </BorderPane>

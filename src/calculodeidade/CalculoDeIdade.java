@@ -11,9 +11,9 @@ public class CalculoDeIdade extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("CalculoDeIdade.fxml"));
-        
-        Scene scene = new Scene(root);
-        
+        stage.setTitle("Cálculo de idade");
+        Scene scene = new Scene(root, 600, 400);
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
